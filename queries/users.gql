@@ -1,0 +1,46 @@
+query getUser {
+  consultantRequestsBoard(filter: { consultantApprovalStatus: PENDING }) {
+    data {
+      items {
+        user {
+          age
+          email
+          enFirstName
+          enFullName
+          enLastName
+          gender
+          profilePicture
+          phone
+          role
+          id
+        }
+        requestType
+        id
+        approvalRequest {
+          status
+          rejectReason
+        }
+      }
+    }
+  }
+}
+
+query Doctors {
+  consultantsBoard {
+    data {
+      items {
+        age
+        email
+        enFirstName
+        enFullName
+        enLastName
+        gender
+        profilePicture
+        phone
+        role
+        id
+        birthDate
+      }
+    }
+  }
+}

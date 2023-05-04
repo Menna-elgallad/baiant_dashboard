@@ -1,0 +1,11 @@
+query terms {
+  termsAndConditions {
+    data
+  }
+}
+
+mutation modifyterms($terms: JSON!) {
+  modifyTerms(terms: $terms) {
+    success
+  }
+}

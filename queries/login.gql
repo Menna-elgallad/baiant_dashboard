@@ -1,0 +1,11 @@
+mutation login($email: String!, $password: String!) {
+  emailAndPasswordLoginBoard(
+    input: { email: $email, password: $password, device: DESKTOP }
+  ) {
+    message
+    data {
+      token
+    }
+  }
+}
+

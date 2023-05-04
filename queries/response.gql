@@ -1,0 +1,16 @@
+mutation accept($id: ID!, $status: ReplyConsultantApprovalRequestStatusEnum!) {
+  replyConsultantRequest(input: { consultantRequestId: $id, status: $status }) {
+    message
+  }
+}
+mutation Regect(
+  $id: ID!
+  $status: ReplyConsultantApprovalRequestStatusEnum!
+  $reason: String
+) {
+  replyConsultantRequest(
+    input: { consultantRequestId: $id, status: $status, rejectReason: $reason }
+  ) {
+    message
+  }
+}

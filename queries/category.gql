@@ -1,0 +1,40 @@
+query questions {
+  faqCategoriesBoard(paginate: { limit: 50 }) {
+    data {
+      items {
+        id
+        arTitle
+        isActive
+        faq {
+          id
+          arQuestion
+          arAnswer
+          enAnswer
+          enQuestion
+        }
+      }
+    }
+  }
+}
+mutation creatcategory($entitle: String!, $artitile: String!) {
+  createFaqCategoryBoard(
+    input: { enTitle: $entitle, arTitle: $artitile, isActive: true }
+  ) {
+    success
+  }
+}
+mutation updatecat($catid: String!, $active: Boolean) {
+  updateFaqCategoryBoard(input: { categoryId: $catid, isActive: $active }) {
+    success
+    message
+  }
+}
+
+mutation editcat($catid: String!, $active: Boolean, $artitle: String) {
+  updateFaqCategoryBoard(
+    input: { categoryId: $catid, isActive: $active, arTitle: $artitle }
+  ) {
+    success
+    message
+  }
+}
