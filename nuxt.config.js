@@ -20,7 +20,7 @@ export default defineNuxtConfig({
             },
         },
     },
-    modules: ["nuxt-graphql-client",'nuxt-icon' ,  '@nuxtjs/tailwindcss'
+    modules: ["nuxt-graphql-client",'nuxt-icon' ,  '@nuxtjs/tailwindcss' ,'@nuxtjs/color-mode'
 
     ],
 

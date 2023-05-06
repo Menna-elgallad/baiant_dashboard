@@ -1,25 +1,26 @@
 <template lang="pug">
 .container2.p-2
   .info
-    .data.flex(class=" w-1/4 justify-between ")
+    .data.flex(class=" w-1/6 justify-between ")
       h3.title LOGO
-      Icon(name="ci:menu-alt-04" class=" text-xl text-black")
+      Icon(name="ci:menu-alt-04" class=" text-xl  cursor-pointer " @click="opened = !opened")
+  
     .end
       button.mybutton(type='button' @click='logout()')
         i.pi.pi-sign-out
         span.ml-2.font-bold Log out
-  #allTheNav(style='display: flex')
-    .sidenavopen(style='display: flex')
-      transition(name='side')
-        .nav2(v-if='opened')
-          div(style='display: flex; align-items: center; justify-content: space-between')
-            i.pi.pi-times-circle(style='cursor: pointer' @click='closeside()')
-          ul(style='margin-top: 20px')
-            li(v-for='item in selected' :key='item.key')
-              i(:class="item.icon + ' mr-2 myicon'")
-              nuxt-link(:to='item.url') {{ item.label }}
-  #main
-    slot
+  .screen.flex(class=" gap-2")      
+    #allTheNav
+        transition(name='side')
+          .nav2(v-if='opened')
+            div(style='display: flex; align-items: center; justify-content: space-between')
+              i.pi.pi-times-circle(style='cursor: pointer' @click='closeside()')
+            ul(style='margin-top: 20px')
+              li(v-for='item in selected' :key='item.key')
+                i(:class="item.icon + ' mr-2 myicon'")
+                nuxt-link(:to='item.url') {{ item.label }}
+    #main
+      slot
 
 </template>
 
@@ -190,8 +191,8 @@ function closeside() {
 
 .nav2 {
   background-color: rgb(220 241 249 / 45%);
-  height: 100vh;
-  top: 0; /* this is required for "sticky" to work */
+  height: 90vh;
+  top: 100px; /* this is required for "sticky" to work */
   width: 250px;
   position: sticky;
   padding: 1rem;

@@ -1,22 +1,9 @@
-<template >
-<div >
- 
-
-  <!-- <chart type="bar" :data="basicData"/> -->
-  
-
-</div>
+<template lang="pug">
+.card 
+  h1 menna
 
 </template>
-  
-<script setup lang="ts">
 
+<script setup lang="ts"></script>
 
-
-
-</script>
-  
-<style lang="scss">
-
-</style>
-  
+<style lang="scss"></style>

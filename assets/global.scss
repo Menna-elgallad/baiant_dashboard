@@ -173,31 +173,31 @@ ul {
 }
 
 .side-enter-from {
-    transform: translatex(-40px);
-    opacity: 0;
+    transform: translatex(-250px);
+   
 }
 
 .side-enter-to {
     transform: translatex(0);
-    opacity: 1;
+
 }
 
 .side-enter-active {
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease;
 }
 
 .side-leave-from {
     transform: translatex(0);
-    opacity: 1;
+  
 }
 
 .side-leave-to {
-    transform: translatex(-40px);
-    opacity: 0;
+    transform: translatex(-250px);
+ 
 }
 
 .side-leave-active {
-    transition: all 0.2s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .body {
