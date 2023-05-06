@@ -20,7 +20,7 @@ export default defineNuxtConfig({
             },
         },
     },
-    modules: ["nuxt-graphql-client",'nuxt-icon'
+    modules: ["nuxt-graphql-client",'nuxt-icon' ,  '@nuxtjs/tailwindcss'
 
     ],
 
@@ -31,6 +31,8 @@ export default defineNuxtConfig({
     },
     build: {
         transpile: ["primevue"],
+      
+      
     },
     ssr: false,
 });

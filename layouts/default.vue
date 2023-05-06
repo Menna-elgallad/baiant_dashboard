@@ -1,9 +1,9 @@
 <template lang="pug">
 .container2.p-2
   .info
-    .data.flex(class=" w-1/4 justify-between")
+    .data.flex(class=" w-1/4 justify-between ")
       h3.title LOGO
-      Icon(name="ci:menu-alt-04")
+      Icon(name="ci:menu-alt-04" class=" text-xl text-black")
     .end
       button.mybutton(type='button' @click='logout()')
         i.pi.pi-sign-out
